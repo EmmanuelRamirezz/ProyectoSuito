@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.bgmodal{
-    background: black;
-    opacity: 0.5;
-}
 .image-size:hover {
     transform: scale(1.6);
 }
