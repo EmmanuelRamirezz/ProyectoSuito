@@ -89,12 +89,12 @@ const people = [
           >
             {people.map((person) => (
               <li key={person.name}>
-                <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                <img className="aspect-[3/2] w-full rounded-2xl object-cover hover:scale-110 ease-out duration-300" src={person.imageUrl} alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
                 <p className="text-base leading-7 text-gray-600">{person.role}</p>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
-                  <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
+                  <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver repositorio'>
                       <span className="sr-only">github</span>
                       <img src={github} alt="Github button" className='h-8 w-8 hover:bg-gray-300 hover:h-9 hover:w-9 rounded-full ease-out duration-300'/>
                       {/* <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -108,9 +108,9 @@ const people = [
                   </li>
 
                   <li>
-                    <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
+                    <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver proyecto'>
                       <span className="sr-only">ProjectUrl</span>
-                      <svg className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
 

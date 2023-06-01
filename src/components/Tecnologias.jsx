@@ -5,48 +5,47 @@ import react from '../assets/react.png'
 import github from '../assets/github.png'
 import tailwind from '../assets/tailwind.png'
 import vite from '../assets/vite.png'
+import database from '../assets/database.png'
 const people = [
     {
       name: 'HTML 5',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-       html,
+      role: 'Avanzado',
+      imageUrl: html,
     },
     {
       name: 'CSS 3',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        css,
+      role: 'Avanzado',
+      imageUrl: css,
     },
     {
       name: 'Javascript (ES5)',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        js,
+      role: 'Avanzado',
+      imageUrl: js,
     },
     {
       name: 'React',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-       react,
+      role: 'Intermedio',
+      imageUrl: react,
     },
     {
       name: 'Tailwind',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        tailwind,
+      role: 'Avanzado',
+      imageUrl: tailwind,
     },
     {
       name: 'Vite',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        vite,
+      role: 'Avanzado',
+      imageUrl: vite,
     },
     {
       name: 'Github',
-      role: 'Co-Founder / CEO',
-      imageUrl:
-        github,
+      role: 'Avanzado',
+      imageUrl: github,
+    },
+    {
+      name: 'Bases de datos SQL',
+      role: 'Basico',
+      imageUrl: database,
     },
     // More people...
   ]
