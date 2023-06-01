@@ -29,6 +29,7 @@ function PruebaForm (){
     // Validar campos antes del envío
     if (!formulario.nombre) {
       setErrores({ ...errores, nombre: 'El nombre es requerido' });
+      
       return;
     }
 

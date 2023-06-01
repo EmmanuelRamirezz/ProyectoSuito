@@ -1,7 +1,69 @@
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import cv from '../assets/CV_Emmanuel_Ramirez_Rubio.pdf'
+import React, { useState } from 'react';
 
 export default function Contacto() {
+  const conf = document.getElementById('conf')
+//Validacion del formulario
+
+  //Declaracion de los estados de error  
+  const [formulario, setFormulario] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    mensaje: ''
+  });
+
+  const [errores, setErrores] = useState({
+    nombre: '',
+    apellido: '',
+    email: '',
+    mensaje: ''
+  });
+
+  // Función para manejar cambios en los campos del formulario
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormulario({ ...formulario, [name]: value });
+  };
+
+  // Función para manejar el envío del formulario
+  function handleSubmit(event){
+    
+   
+    // Validar campos antes del envío
+    if (!formulario.nombre) {
+      setErrores({ ...errores, nombre: 'El nombre es requerido' });
+      event.preventDefault();
+      return;
+    }
+
+    if (!formulario.apellido) {
+      setErrores({ ...errores, nombre: 'El apellido es requerido' });
+      event.preventDefault();
+      return;
+    }
+
+    if (!formulario.email) {
+      setErrores({ ...errores, email: 'El email es requerido' });
+      event.preventDefault();
+      return;
+    }
+
+    if (!formulario.mensaje) {
+      setErrores({ ...errores, mensaje: 'El mensaje es requerido' });
+      event.preventDefault();
+      return;
+    }
+    conf.classList.remove('hidden') 
+
+    // Si todos los campos están completos, puedes continuar con el envío del formulario
+    // Aquí puedes realizar la lógica para enviar los datos a tu backend o hacer cualquier otra acción necesaria
+
+    // Reiniciar el formulario y los errores después del envío exitoso
+    //setFormulario({ nombre: '', apellido: '', email: '', mensaje: '' });
+    setErrores({ nombre: '', apellido: '', email: '', mensaje: '' });
+  };
 
   return (
     <div className="relative isolate bg-gray-900">
@@ -96,7 +158,7 @@ export default function Contacto() {
             </dl>
           </div>
         </div>
-        <form action="https://formsubmit.co/df720a2ba759d1019e49fff26a32a50a" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <form action="https://formsubmit.co/df720a2ba759d1019e49fff26a32a50a" method="POST" onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
@@ -106,12 +168,16 @@ export default function Contacto() {
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="first-name"
-                    id="nameInput"
+                    id="nombre"
+                    name="nombre"
+                    value={formulario.nombre}
+                    onChange={handleChange}
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
+
                 </div>
+                {errores.nombre && <p className="mt-6 text-lg leading-8 text-red-400">{errores.nombre}</p>}
               </div>
               <div>
                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
@@ -120,12 +186,16 @@ export default function Contacto() {
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="lastNameInput"
-                    id="last-name"
+                    id="apellido"
+                    name="apellido"
+                    value={formulario.apellido}
+                    onChange={handleChange}
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
+
                 </div>
+                {errores.apellido && <p className="mt-6 text-lg leading-8 text-red-400">{errores.apellido}</p>}
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
@@ -134,11 +204,14 @@ export default function Contacto() {
                 <div className="mt-2.5">
                   <input
                     type="email"
+                    id="email"
                     name="email"
-                    id="emailInput"
+                    value={formulario.email}
+                    onChange={handleChange}
                     autoComplete="email"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   />
+                  {errores.email && <p className="mt-6 text-lg leading-8 text-red-400">{errores.email}</p>}
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -147,24 +220,31 @@ export default function Contacto() {
                 </label>
                 <div className="mt-2.5">
                   <textarea
-                    name="message"
-                    id="messageInput"
+                    id="mensaje"
+                    name="mensaje"
+                    value={formulario.mensaje}
+                    onChange={handleChange}
                     rows={4}
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                     defaultValue={''}
                   />
+                  {errores.mensaje && <p className="mt-6 text-lg leading-8 text-red-400">{errores.mensaje}</p>}
                 </div>
               </div>
+ 
             </div>
             <div className="mt-8 flex justify-end">
               <button
-                type="button" //
-                id='formBtn'
+                type="submit"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
-                Send message
+                Enviar
               </button>
+              {/* No salta capcha y te redirecciona de fuelta */}
+              <input type="hidden" name="_captcha" value="false"></input>
+              <input type="hidden" name="_next" value="http://localhost:5173/"></input>
             </div>
+            <p className="hidden mt-6 text-lg leading-8 text-green-400" id='conf'>Mensaje enviado exitosamente</p>
           </div>
         </form>
       </div>
