@@ -5,6 +5,7 @@ import Educacion from './components/Educacion'
 import Tecnologias from './components/Tecnologias'
 import Proyectos from './components/Proyectos'
 import Contacto from './components/Contacto'
+import PruebaForm from './components/PruebaForm'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Tecnologias/>
       <Proyectos/>
       <Contacto/>
+      <PruebaForm/>
     </>
   )
 }
