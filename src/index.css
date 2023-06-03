@@ -3,5 +3,34 @@
 @tailwind utilities;
 
 .image-size:hover {
-    transform: scale(1.6);
+  transform: scale(1.6);
+}
+.navL{
+  background-color: rgb(235, 235, 235);
+}
+.navD{
+  background-color: rgb(29, 28, 28);
+}
+
+.mainL{
+  background: rgb(227,247,255);
+  background: linear-gradient(133deg, rgba(227,247,255,0.9556197478991597) 0%, rgba(255,255,255,1) 100%);
+}
+.mainD{
+  background: #1d282d;
+}
+
+.footerL{    
+  background: rgb(241,255,227);
+  background: linear-gradient(313deg, rgba(241,255,227,0.9556197478991597) 0%, rgba(255,255,255,1) 100%);
+}
+.footerD{
+  background-color: #37414b;
+}
+
+.buttonL{
+  background-color: #aeff85;
+}
+.buttonD{
+  background-color: #8f9fd8;
 }
