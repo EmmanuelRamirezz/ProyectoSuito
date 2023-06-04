@@ -52,11 +52,11 @@ const people = [
   
   export default function Tecnologias() {
     return (
-      <div className="mainD py-24 sm:py-32">
+      <div className="py-24 sm:py-32 bg-mainL dark:bg-mainD">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tecnologías</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">Tecnologías</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
               Estas son las tecnologías que domino actualmente y que son de gran relevancía en el area del desarrollo web
             </p>
           </div>
@@ -66,7 +66,7 @@ const people = [
                 <div className="flex items-center gap-x-6">
                   <img className="h-16 w-16" src={person.imageUrl} alt="Tecnologias que manejo" />
                   <div>
-                    <h3 className="text-base font-semibold leading-7 tracking-tight text-white">{person.name}</h3>
+                    <h3 className="text-base font-semibold leading-7 tracking-tight text-black dark:text-white">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 titleD">{person.role}</p>
                   </div>
                 </div>

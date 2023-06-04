@@ -6,30 +6,28 @@
   transform: scale(1.6);
 }
 .navL{
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(212, 211, 211);
 }
 .navD{
   background-color: rgb(29, 28, 28);
 }
 
-.mainL{
-  background: rgb(227,247,255);
-  background: linear-gradient(133deg, rgba(227,247,255,0.9556197478991597) 0%, rgba(255,255,255,1) 100%);
-}
+ .mainL{
+  background: rgb(214, 239, 248);
+}  
 .mainD{
   background: #1d282d;
 }
 
 .footerL{    
-  background: rgb(241,255,227);
-  background: linear-gradient(313deg, rgba(241,255,227,0.9556197478991597) 0%, rgba(255,255,255,1) 100%);
+  background: rgb(247, 238, 230);
 }
 .footerD{
   background-color: #37414b;
 }
 
 .buttonL{
-  background: rgb(170, 230, 251);
+  background: #8f9fd8;
 
 }
 .buttonD{
@@ -37,6 +35,9 @@
 }
 .titleD{
   color: #8f9fd8;
+}
+.titleL{
+  color: rgb(60, 198, 248);
 }
 
 .buttonD:hover{

@@ -117,12 +117,12 @@ const certificaciones = [
 
     return (
       
-      <div className="footerD py-24 sm:py-32"> 
+      <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD"> 
         <a name='education' className='pt-24'></a>              
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Educación</h2>
-            <p className="mt-2 text-lg leading-8 text-white">
+            <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">Educación</h2>
+            <p className="mt-2 text-lg leading-8 text-black dark:text-white">
               Mi trayectoria como estudiante y certificaciones obtenidas
             </p>
           </div>
@@ -139,24 +139,24 @@ const certificaciones = [
                 </div>
                 <div className="max-w-xl">
                   <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <time dateTime={post.datetime} className="text-white">
+                    <time dateTime={post.datetime} className="text-black dark:text-white">
                       {post.date}
                     </time>
                     <div
                       href={post.category.href}
-                      className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                      className="relative z-10 rounded-full  px-3 py-1.5 font-medium hover:bg-gray-100 text-white dark:text-gray-600 bg-gray-400 dark:bg-gray-50"
                     >
                       {post.category.title}
                     </div>
                   </div>
                   <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                    <h3 className="mt-3 text-lg font-semibold leading-6 text-black dark:text-white">
                       <div href={post.href}>
                         <span className="absolute inset-0" />
                         {post.title}
                       </div>
                     </h3>
-                    <p className="mt-5 line-clamp-4 text-md leading-6 text-gray-300">{post.description}</p>
+                    <p className="mt-5 line-clamp-4 text-md leading-6 text-gray-600 dark:text-gray-300">{post.description}</p>
                   </div>
                 </div>
               </article>

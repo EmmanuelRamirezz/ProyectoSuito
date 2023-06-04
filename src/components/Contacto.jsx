@@ -66,7 +66,7 @@ export default function Contacto() {
   };
 
   return (
-    <div className="relative isolate mainD">
+    <div className="relative isolate bg-mainL dark:bg-mainD">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -105,16 +105,16 @@ export default function Contacto() {
                 />
               </div>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-white">Contacto</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <h2 className="text-3xl font-bold tracking-tight tex-black dark:text-white">Contacto</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
               ¿Tienes un proyecto en mente? Ponte en contacto conmigo llenando el siguiente formulario y me comunicaré contigo lo antes posible. Mientras puedes revisar mi linkedin y mi curriculum.
             </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
+            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
 
-                  <svg className="h-7 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <svg className="h-7 w-6 text-gray-600 dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
@@ -135,7 +135,7 @@ export default function Contacto() {
                       </svg>
                 </dt>
                 <dd>
-                  <a className="hover:text-white" href="https://www.linkedin.com/in/emmanuel-ramirez-rubio" target="_blank">
+                  <a className="hover:text-black dark:hover:text-white" href="https://www.linkedin.com/in/emmanuel-ramirez-rubio" target="_blank" title='Ver mi linkedin'>
                     linkedin.com/in/emmanuel-ramirez-rubio
                   </a>
                 </dd>
@@ -149,7 +149,7 @@ export default function Contacto() {
 
                 </dt>
                 <dd>
-                  <a className="hover:text-white" href= {cv} download="CV_Emmanuel_Ramirez_Rubio.pdf">
+                  <a className="hover:text-black dark:hover:text-white" href= {cv} download="CV_Emmanuel_Ramirez_Rubio.pdf" title='descarcar mi cv'>
                     Curriculum
                   </a>
                 </dd>
@@ -157,11 +157,11 @@ export default function Contacto() {
             </dl>
           </div>
         </div>
-        <form action="https://formsubmit.co/df720a2ba759d1019e49fff26a32a50a" method="POST" onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+        <form action="https://formsubmit.co/df720a2ba759d1019e49fff26a32a50a" method="POST" onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 dar:bg-footerD">
+          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg ">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
+                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-black dark:text-white">
                   First name
                 </label>
                 <div className="mt-2.5">
@@ -172,14 +172,14 @@ export default function Contacto() {
                     value={formulario.nombre}
                     onChange={handleChange}
                     autoComplete="given-name"
-                    className="footerD block w-full rounded-md border-0 contact px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 contact px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
 
                 </div>
                 {errores.nombre && <p className="mt-6 text-lg leading-8 text-red-400">{errores.nombre}</p>}
               </div>
               <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
+                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-black dark:text-white">
                   Last name
                 </label>
                 <div className="mt-2.5">
@@ -190,14 +190,14 @@ export default function Contacto() {
                     value={formulario.apellido}
                     onChange={handleChange}
                     autoComplete="family-name"
-                    className="block w-full rounded-md border-0 footerD px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
 
                 </div>
                 {errores.apellido && <p className="mt-6 text-lg leading-8 text-red-400">{errores.apellido}</p>}
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-black dark:text-white">
                   Email
                 </label>
                 <div className="mt-2.5">
@@ -208,13 +208,13 @@ export default function Contacto() {
                     value={formulario.email}
                     onChange={handleChange}
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 footerD px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
                   {errores.email && <p className="mt-6 text-lg leading-8 text-red-400">{errores.email}</p>}
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-black dark:text-white">
                   Message
                 </label>
                 <div className="mt-2.5">
@@ -224,7 +224,7 @@ export default function Contacto() {
                     value={formulario.mensaje}
                     onChange={handleChange}
                     rows={4}
-                    className="block w-full rounded-md border-0 footerD px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                     defaultValue={''}
                   />
                   {errores.mensaje && <p className="mt-6 text-lg leading-8 text-red-400">{errores.mensaje}</p>}
