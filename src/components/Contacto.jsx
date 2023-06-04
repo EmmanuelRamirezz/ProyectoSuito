@@ -135,7 +135,7 @@ export default function Contacto() {
                       </svg>
                 </dt>
                 <dd>
-                  <a className="hover:text-black dark:hover:text-white" href="https://www.linkedin.com/in/emmanuel-ramirez-rubio" target="_blank" title='Ver mi linkedin'>
+                  <a className="hover:font-bold dark:hover:text-white" href="https://www.linkedin.com/in/emmanuel-ramirez-rubio" target="_blank" title='Ver mi linkedin'>
                     linkedin.com/in/emmanuel-ramirez-rubio
                   </a>
                 </dd>
@@ -149,7 +149,7 @@ export default function Contacto() {
 
                 </dt>
                 <dd>
-                  <a className="hover:text-black dark:hover:text-white" href= {cv} download="CV_Emmanuel_Ramirez_Rubio.pdf" title='descarcar mi cv'>
+                  <a className="hover:font-bold dark:hover:text-white" href= {cv} download="CV_Emmanuel_Ramirez_Rubio.pdf" title='descarcar mi cv'>
                     Curriculum
                   </a>
                 </dd>
