@@ -75,11 +75,11 @@ const people = [
   
   export default function Proyectos() {
     return (
-      <div className="bg-white py-24 sm:py-32">
+      <div className="footerD py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Proyectos</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Proyectos</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
               Proyectos que he desarrollado desde el 2020 donde se encuentran proyectos universitarios, personales y laborales. Todos mis proyectos tienen buena puntuación en lighthouse, cuentan con responsive design y están disponibles en github. Exploralos
             </p>
           </div>
@@ -90,8 +90,8 @@ const people = [
             {people.map((person) => (
               <li key={person.name}>
                 <img className="aspect-[3/2] w-full rounded-2xl object-cover hover:scale-110 ease-out duration-300" src={person.imageUrl} alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{person.name}</h3>
-                <p className="text-base leading-7 text-gray-600">{person.role}</p>
+                <h3 className="mt-6 text-xl font-semibold leading-8 tracking-tight text-white">{person.name}</h3>
+                <p className="text-base leading-7 text-gray-300">{person.role}</p>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
                   <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver repositorio'>
@@ -108,7 +108,7 @@ const people = [
                   </li>
 
                   <li>
-                    <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver proyecto'>
+                    <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-white" title='Ver proyecto'>
                       <span className="sr-only">ProjectUrl</span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

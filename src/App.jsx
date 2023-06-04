@@ -18,7 +18,7 @@ function App() {
       <Tecnologias/>
       <Proyectos/>
       <Contacto/>
-
+      <Diseño/>
     </>
   )
 }
