@@ -176,13 +176,13 @@ const certificaciones = [
           {showModal ? (
         <>
         {/* items-center */}
-          <div className="flex justify-center align-middle overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-gray-800">
+          <div className="flex justify-center align-middle overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-mainL dark:bg-gray-800">
             <div className="relative h-4/5 w-11/12 my-6 mx-auto mb-5 ">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full footerD outline-none focus:outline-none">
-                <div className="flex justify-center p-5   rounded-t ">
-                  <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">Mis certificaciones</h2>
+                <div className="flex justify-center p-5   rounded-t text-black dark:text-white bg-footerL dark:bg-footerD">
+                  <h2 className="text-2xl font-bold tracking-tight  sm:text-4xl ">Mis certificaciones</h2>
                 </div>
-                <div className="p-6 flex-auto footerD">
+                <div className="p-6 flex-auto bg-footerL dark:bg-footerD">
               {/*content star*/}
               <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2 ">
                 {certificaciones.map((certificado) => (
@@ -201,7 +201,7 @@ const certificaciones = [
               </div>
               {/* Content end */}
                 </div>
-                <div className="flex items-center justify-center   rounded-md mb-5">
+                <div className="flex items-center justify-center pb-5 dark:text-white bg-footerL dark:bg-footerD">
                   <button
                     className="rounded-md buttonD px-10 py-2.5 text-center text-md mt-20 mx-auto font-semibold text-white shadow-sm buttonD:hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                     type="button"
