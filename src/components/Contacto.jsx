@@ -235,7 +235,7 @@ export default function Contacto() {
             <div className="mt-8 flex justify-end">
               <button
                 type="submit"
-                className="rounded-md buttonD px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm buttonD:hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="rounded-md bg-buttons px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-buttonsH focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Enviar
               </button>

@@ -165,7 +165,7 @@ const certificaciones = [
           <div className='flex'>
           <button
           type="button"
-          className="rounded-md buttonD px-3.5 py-2.5 text-center text-md mt-20 mx-auto font-semibold text-white shadow-sm hover:butonDhover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          className="rounded-md bg-buttons px-3.5 py-2.5 text-center text-md mt-20 mx-auto font-semibold text-white shadow-sm hover:bg-buttonsH focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           id='certificationsModal'
           onClick={() => setShowModal(true)}
               >

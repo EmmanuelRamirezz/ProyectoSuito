@@ -22,7 +22,8 @@ module.exports = {
         "footerL": 'rgb(247, 238, 230)',
         "footerD": '#37414b',
 
-        "buttons": '#8f9fd8'
+        "buttons": '#8f9fd8',
+        "buttonsH": '#5b73ca'
       },
     },
 

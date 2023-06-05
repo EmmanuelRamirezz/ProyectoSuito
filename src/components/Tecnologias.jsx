@@ -67,7 +67,7 @@ const people = [
                   <img className="h-16 w-16" src={person.imageUrl} alt="Tecnologias que manejo" />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-black dark:text-white">{person.name}</h3>
-                    <p className="text-sm font-semibold leading-6 titleD">{person.role}</p>
+                    <p className="text-sm font-semibold leading-6 text-buttons">{person.role}</p>
                   </div>
                 </div>
               </li>
