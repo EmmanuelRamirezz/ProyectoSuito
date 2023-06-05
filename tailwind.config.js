@@ -23,8 +23,6 @@ module.exports = {
         "footerD": '#37414b',
 
         "buttons": '#8f9fd8'
-
-
       },
     },
 
