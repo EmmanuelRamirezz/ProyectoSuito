@@ -1,7 +1,9 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import React, { useState } from 'react';
 
+const htmlID = document.getElementById('htmlID');
 const navigation = [
   { name: 'Sobre mi', href: '#about', current: false },
   { name: 'Educación', href: '#education', current: false },
@@ -10,11 +12,17 @@ const navigation = [
   { name: 'Contacto', href: '#contact', current: false },  
 ]
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function NavBar() {
+  //boton toggle para lightmode
+  const [lightMode, setLightMode] = useState(false);
+  function clickHandler(){ 
+    setLightMode(!lightMode)    
+  }
   return (
     <Disclosure as="nav" className="sticky top-0 z-20 bg-navL dark:bg-navD">
       {({ open }) => (
@@ -57,27 +65,30 @@ export default function NavBar() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="rounded-full p-1    focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-gray-400 hover:text-white  dark:hover:text-white text-black dark:text-gray-400"
-                >
-                  <span className="sr-only">Change language</span>
-                  
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
-                  </svg>
-                </button>
 
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="flex rounded-full dark:bg-navD text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div id='language' className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white    text-black'>          
+                  <button
+                    type="button"
+                    className="rounded-full p-1"
+                  >
+                    <span className="sr-only">Change language</span>
+                  
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+                    </svg>
+                  </button>
+                </div> 
+
+                {/* Light and dark mode button */}
+                    <div onClick={clickHandler} className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white text-black'
+                    >
+                      {lightMode ? htmlID.classList.remove('dark') : htmlID.classList.add('dark')}       
                       {/* Light Mode */}
                       <button
                       type="button"
-                      className="rounded-full p-1  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-gray-400 hover:text-white  dark:hover:text-white text-black dark:text-gray-400"
+                      className="rounded-full p-1     "
                       >
                             <span className="sr-only">Change language</span>                  
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -88,14 +99,14 @@ export default function NavBar() {
                         {/* Dark Mode */}
                         <button
                         type="button"
-                        className="rounded-full dark:navD p-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-gray-400 hover:text-white  dark:hover:text-white text-black dark:text-gray-400" 
+                        className="rounded-full p-1" 
                         >
                         <span className="sr-only">Change language</span>                       
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                         </svg>
                         </button>                 
-                    </Menu.Button>
+                    </div> 
                   </div>
                   <Transition
                     as={Fragment}
@@ -139,10 +150,9 @@ export default function NavBar() {
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+
               </div>
             </div>
-          </div>
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
