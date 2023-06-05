@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const htmlID = document.getElementById('htmlID');
 const navigation = [
@@ -12,16 +12,21 @@ const navigation = [
   { name: 'Contacto', href: '#contact', current: false },  
 ]
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function NavBar() {
+export default function NavBar({language, setLanguage}) {
   //boton toggle para lightmode
   const [lightMode, setLightMode] = useState(false);
   function clickHandler(){ 
     setLightMode(!lightMode)    
+  }
+  //boton toggle para idioma
+  const[languageToggle, setLanguageToggle] = useState(false);
+  function clickHandler2(){
+    setLanguageToggle(!languageToggle)
+    console.log(languageToggle);
   }
   return (
     <Disclosure as="nav" className="sticky top-0 z-20 bg-navL dark:bg-navD">
@@ -68,7 +73,7 @@ export default function NavBar() {
 
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div id='language' className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white    text-black'>          
+                <div onClick={clickHandler2} className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white    text-black'>          
                   <button
                     type="button"
                     className="rounded-full p-1"

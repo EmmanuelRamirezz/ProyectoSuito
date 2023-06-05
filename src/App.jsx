@@ -7,12 +7,16 @@ import Proyectos from './components/Proyectos'
 import Contacto from './components/Contacto'
 import Diseño from './components/Diseño'
 
+import { useState } from 'react'
+
 
 function App() {
 
+  const [language, setLanguage]=useState('');
+
   return (
     <>
-      <NavBar/>
+      <NavBar language={language} setLanguage={setLanguage}/>
       <SobreMi/>
       <Educacion/>
       <Tecnologias/>

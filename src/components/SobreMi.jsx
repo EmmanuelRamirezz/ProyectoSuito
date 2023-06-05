@@ -25,7 +25,7 @@ const features = [
   },
 ]
 
-export default function SobreMi() {
+export default function SobreMi({language}) {
   return (
     <div className="overflow-hidden py-10 sm:py-32 bg-mainL dark:bg-mainD">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
