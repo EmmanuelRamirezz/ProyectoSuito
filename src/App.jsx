@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <NavBar language={language} setLanguage={setLanguage}/>
-      <SobreMi/>
+      <SobreMi language={language}/>
       <Educacion/>
       <Tecnologias/>
       <Proyectos/>
