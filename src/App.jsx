@@ -6,23 +6,20 @@ import Tecnologias from './components/Tecnologias'
 import Proyectos from './components/Proyectos'
 import Contacto from './components/Contacto'
 import Diseño from './components/Diseño'
-
 import { useState } from 'react'
+import UserProvider from './context/UserProvider'
 
 
 function App() {
-
-  const [language, setLanguage]=useState('');
-
   return (
-    <>
-      <NavBar language={language} setLanguage={setLanguage}/>
-      <SobreMi language={language}/>
-      <Educacion/>
-      <Tecnologias/>
-      <Proyectos/>
-      <Contacto/>
-    </>
+    <UserProvider>
+      <NavBar/>
+      <SobreMi/>
+      <Educacion />
+      <Tecnologias />
+      <Proyectos />
+      <Contacto />
+    </UserProvider>
   )
 }
 
