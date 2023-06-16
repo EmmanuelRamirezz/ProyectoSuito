@@ -5,10 +5,7 @@ import Educacion from './components/Educacion'
 import Tecnologias from './components/Tecnologias'
 import Proyectos from './components/Proyectos'
 import Contacto from './components/Contacto'
-import Diseño from './components/Diseño'
-import { useState } from 'react'
 import UserProvider from './context/UserProvider'
-
 
 function App() {
   return (
@@ -22,5 +19,4 @@ function App() {
     </UserProvider>
   )
 }
-
 export default App

@@ -1,6 +1,6 @@
 import { CodeBracketIcon, LanguageIcon, UserIcon, AcademicCapIcon } from '@heroicons/react/20/solid'
 import perfil from '../assets/perfil.jpg'
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { UserContext } from "../context/UserProvider";
 
 const features = [
@@ -51,7 +51,6 @@ const myName = "My name is Emmanuel Ramirez Rubio"
 const myDescription = "Graduated from Computer Systems Engineering, with two years of experience in the development of personal websites and currently working as a volunteer at ENMICE in the development area, under the supervision of the staff of the Mexican Space Agency (AEM). I consider myself a Jr. Front-End developer with a passion for technology. I am always looking for new challenges and I never stop learning. I look forward to having the opportunity to work together. Enjoy my portfolio.";
 export default function SobreMi() {
   const [lan, setLan] = useContext(UserContext);
-  console.log(lan);
   return (
     <div className="overflow-hidden py-10 sm:py-32 bg-mainL dark:bg-mainD">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -73,12 +72,12 @@ export default function SobreMi() {
                   </div>
                   :
                   <div>
-                  <h2 className="text-3xl font-semibold leading-7 text-buttons dark:buttons">Hola!</h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">Mi nombre es: <br /> Emmanuel Ramirez Rubio</p>
-                  <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                    Graduado de la carrera de Ingeniería en Sistemas Computacionales, con dos años de experiencia en el desarrollo de sitios web personales y actualmente trabajando como voluntario en ENMICE en el área de desarrollo, bajo la supervisión del personal de la Agencia Espacial Mexicana (AEM). Me considero un desarrollador Jr. Front-End apasionado por la tecnología. Siempre estoy en busca de nuevos retos y nunca paro de aprender. Espero poder tener la oportunidad de trabajar juntos. Disfruta mi portafolio.
-                  </p>
-                </div>
+                    <h2 className="text-3xl font-semibold leading-7 text-buttons dark:buttons">Hola!</h2>
+                    <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">Mi nombre es: <br /> Emmanuel Ramirez Rubio</p>
+                    <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                      Graduado de la carrera de Ingeniería en Sistemas Computacionales, con dos años de experiencia en el desarrollo de sitios web personales y actualmente trabajando como voluntario en ENMICE en el área de desarrollo, bajo la supervisión del personal de la Agencia Espacial Mexicana (AEM). Me considero un desarrollador Jr. Front-End apasionado por la tecnología. Siempre estoy en busca de nuevos retos y nunca paro de aprender. Espero poder tener la oportunidad de trabajar juntos. Disfruta mi portafolio.
+                    </p>
+                  </div>
               }
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600  dark:text-gray-300 lg:max-w-none">
 
@@ -114,7 +113,6 @@ export default function SobreMi() {
           />
         </div>
       </div>
-
     </div>
   )
 }

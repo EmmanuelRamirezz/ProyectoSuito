@@ -5,16 +5,34 @@ import p4 from '../assets/p4.svg';
 import p5 from '../assets/p5.svg';
 import p6 from '../assets/p6.svg';
 import p7 from '../assets/p7.svg';
-import p8 from '../assets/p8.png';
-
+import p8 from '../assets/p8.svg';
+import p9 from '../assets/p9.svg';
+import p10 from '../assets/p10.svg';
 import github from '../assets/github.png'
-const people = [
+import { useContext } from 'react';
+import { UserContext } from "../context/UserProvider";
+
+const projects = [
   {
-    name: 'App de tareas pendientes',
+    name: 'App de tareas pendientes con React',
     role: 'Mi primera app de React funcional donde se implementan conceptos clave como: componentes, elementos, estados, hooks, effects, portals, context y props. Más proyectos con esta librería están en proceso.',
     imageUrl: p7,
     githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
     projectUrl: 'https://react-basic-ex.netlify.app/',
+  },
+  {
+    name: 'Calculadora con React',
+    role: 'App basica creada para practicar conceptos fundamentales de React. Donde se manejan estados, props, comunicación entre componentes, lógica de JS y estilos con CSS',
+    imageUrl: p9,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-calculator',
+    projectUrl: 'https://ramirez-react-calculator.netlify.app',
+  },
+  {
+    name: 'Logica de un carrito de compras con React',
+    role: 'Proyecto donde se implementa la lógica funcional de un carrito de compras ideal para un e-commerce. Desarrollado con React y tailwind. Usando reactRouter, reactContext y useState',
+    imageUrl: p10,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
+    projectUrl: 'https://cartslogic.netlify.app',
   },
   {
     name: 'Frontend-movies',
@@ -41,7 +59,7 @@ const people = [
     name: 'Herramientas estadisticas',
     role: 'Proyecto con 6 herramientas estadisticas, enfocado a la resolución de problemas y de buenas practicas de maquetación. Desarrollando la logica de Javascript moderno (ECMAScript 6)',
     imageUrl:
-    p3,
+      p3,
     githubUrl: 'https://github.com/EmmanuelRamirezz/curso-practico-javascript',
     projectUrl: 'https://estadisticas-js.netlify.app/',
   },
@@ -49,7 +67,7 @@ const people = [
     name: 'Sitio de divisas Batatabit',
     role: 'Proyecto elaborado siguiendo la metodologia de desarrollo "Mobile first" donde se muestra un sitio ficticio de finanzas y divisas. Elaborado a partir de un curso en platzi.',
     imageUrl:
-    p4,
+      p4,
     githubUrl: 'https://github.com/EmmanuelRamirezz/divisas-batatabit',
     projectUrl: 'https://batatabit-divisas.netlify.app/',
   },
@@ -57,7 +75,7 @@ const people = [
     name: 'Blogs de Café',
     role: 'Este proyecto sigue la estructura de maquetación de un blog de café ficticio donde destaca el uso de: normalize css, flexbox, grid, responsive design.',
     imageUrl:
-    p5,
+      p5,
     githubUrl: 'https://github.com/EmmanuelRamirezz/coffee-blog',
     projectUrl: 'https://cafe-ramirez.netlify.app/',
   },
@@ -65,63 +83,166 @@ const people = [
     name: 'E-commerce Rubios Mandalas',
     role: 'Maquetacion de tienda online de un proyecto familiar que vende mandalas siguiendo patrones de diseño modernos implementando flexbox, grid, normilize y html semantico.',
     imageUrl:
-    p6,
+      p6,
     githubUrl: 'https://github.com/EmmanuelRamirezz/rubios-mandalas',
     projectUrl: 'https://rubios-mandalas.netlify.app/',
   },
+];
+const projectsEN = [
+  {
+    name: 'To-do app with React',
+    role: 'My first functional React app where you can find key concepts such as: components, elements, states, hooks, effects, portals, context and props are implemented. More projects with this library are coming.',
+    imageUrl: p7,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
+    projectUrl: 'https://react-basic-ex.netlify.app/',
+  },
+  {
+    name: 'Calculator with React',
+    role: 'Basic app created to practice fundamental React concepts. Where states, props, communication between components, JS logic and styles with CSS are handled',
+    imageUrl: p9,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-calculator',
+    projectUrl: 'https://ramirez-react-calculator.netlify.app',
+  },
+  {
+    name: 'Logic of a shopping cart with React',
+    role: 'Project where the logic of a functional shopping cart is implemented. Ideal for an e-commerce. Developed with React and tailwind. Using reactRouter, reactContext and useState',
+    imageUrl: p10,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
+    projectUrl: 'https://cartslogic.netlify.app',
+  },
+  {
+    name: 'Frontend-movies',
+    role: 'Web page where the consumption of a professional REST API is implemented. The concept of "single page application" is implemented creating a site about movie. It should be noted that all my projects have responsive design and good practices, endorsed by lighthouse. API used: themoviedb.org',
+    imageUrl: p8,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/advanced-api-rest-proyect',
+    projectUrl: 'https://frontendmovies.netlify.app/',
+  },
+  {
+    name: 'Puppys app',
+    role: 'App where key REST API consumption concepts are applied. Where you can consume, filter and upload content. At the same time that the information is manipulated to be displayed correctly',
+    imageUrl: p1,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/perritos-api-rest',
+    projectUrl: 'https://doggysapp.netlify.app/',
+  },
+  {
+    name: 'Inventory and classroom manager',
+    role: 'Complete project (full-stack) that was developed for the Tecnologico Superior de Jalisco. Using HTML, CSS, JS and Firebase. To solve a real problem.',
+    imageUrl: p2,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/gestion-de-inventario-aulas',
+    projectUrl: 'https://sistemagastronomia.netlify.app/',
+  },
+  {
+    name: 'Statistical tools',
+    role: 'Project with 6 statistical tools, focused on problem solving and good layout practices. Developing modern Javascript logic (ECMAScript 6)',
+    imageUrl:
+      p3,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/curso-practico-javascript',
+    projectUrl: 'https://estadisticas-js.netlify.app/',
+  },
+  {
+    name: 'Batatabit forex trade site',
+    role: 'Project elaborated following the "Mobile first" development methodology where a fictitious finance and currency site is shown. Created from a course in platzi.',
+    imageUrl:
+      p4,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/divisas-batatabit',
+    projectUrl: 'https://batatabit-divisas.netlify.app/',
+  },
+  {
+    name: 'Coffee Blog',
+    role: 'This project follows the layout structure of a fictional coffee blog where the use of: normalize css, flexbox, grid, responsive design stands out.',
+    imageUrl:
+      p5,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/coffee-blog',
+    projectUrl: 'https://cafe-ramirez.netlify.app/',
+  },
+  {
+    name: 'E-commerce Rubios Mandalas',
+    role: 'Online store layout of a family project that sells mandalas following modern design patterns implementing flexbox, grid, normilize and semantic html.',
+    imageUrl:
+      p6,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/rubios-mandalas',
+    projectUrl: 'https://rubios-mandalas.netlify.app/',
+  },
+];
+const title = "Projects";
+const subTitle = "Projects that I have developed since 2020 where university, personal and work projects are found. All my projects have a good score in lighthouse, have responsive design and are available on github. Explore them!";
 
-    // More people...
-  ]
-  
-  export default function Proyectos() {
-    return (
-      <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">Proyectos</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Proyectos que he desarrollado desde el 2020 donde se encuentran proyectos universitarios, personales y laborales. Todos mis proyectos tienen buena puntuación en lighthouse, cuentan con responsive design y están disponibles en github. Exploralos!
-            </p>
-          </div>
-          <ul
-            role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-          >
-            {people.map((person) => (
-              <li key={person.name}>
-                <img className="aspect-[3/2] w-full rounded-2xl object-cover hover:scale-110 ease-out duration-300" src={person.imageUrl} alt="" />
-                <h3 className="mt-6 text-xl font-semibold leading-8 tracking-tight text-black dark:text-white">{person.name}</h3>
-                <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{person.role}</p>
-                <ul role="list" className="mt-6 flex gap-x-6">
-                  <li>
-                  <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver repositorio'>
-                      <span className="sr-only">github</span>
-                      <img src={github} alt="Github button" className='h-8 w-8 hover:bg-gray-300 hover:h-9 hover:w-9 rounded-full ease-out duration-300'/>
-                      {/* <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                          clipRule="evenodd"
-                        />
-                      </svg> */}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-black dark:hover:text-white" title='Ver proyecto'>
-                      <span className="sr-only">ProjectUrl</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            ))}
-          </ul>
+export default function Proyectos() {
+  const [lan, setLan] = useContext(UserContext);
+  return (
+    <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">
+            {lan ? title : "Proyectos"}
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            {lan ?
+              subTitle
+              :
+              "Proyectos que he desarrollado desde el 2020 donde se encuentran proyectos universitarios, personales y laborales. Todos mis proyectos tienen buena puntuación en lighthouse, cuentan con responsive design y están disponibles en github. Exploralos!"
+            }
+          </p>
         </div>
+        <ul
+          role="list"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        >
+          {
+            lan ?
+              projectsEN.map((person) => (
+                <li key={person.name}>
+                  <img className="aspect-[3/2] w-full rounded-2xl object-cover hover:scale-110 ease-out duration-300" src={person.imageUrl} alt="" />
+                  <h3 className="mt-6 text-xl font-semibold leading-8 tracking-tight text-black dark:text-white">{person.name}</h3>
+                  <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{person.role}</p>
+                  <ul role="list" className="mt-6 flex gap-x-6">
+                    <li>
+                      <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver repositorio'>
+                        <span className="sr-only">github</span>
+                        <img src={github} alt="Github button" className='h-8 w-8 hover:bg-gray-300 hover:h-9 hover:w-9 rounded-full ease-out duration-300' />
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-black dark:hover:text-white" title='Ver proyecto'>
+                        <span className="sr-only">ProjectUrl</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              ))
+              :
+              projects.map((person) => (
+                <li key={person.name}>
+                  <img className="aspect-[3/2] w-full rounded-2xl object-cover hover:scale-110 ease-out duration-300" src={person.imageUrl} alt="" />
+                  <h3 className="mt-6 text-xl font-semibold leading-8 tracking-tight text-black dark:text-white">{person.name}</h3>
+                  <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{person.role}</p>
+                  <ul role="list" className="mt-6 flex gap-x-6">
+                    <li>
+                      <a href={person.githubUrl} target="_blank" className="text-gray-400 hover:text-gray-500" title='Ver repositorio'>
+                        <span className="sr-only">github</span>
+                        <img src={github} alt="Github button" className='h-8 w-8 hover:bg-gray-300 hover:h-9 hover:w-9 rounded-full ease-out duration-300' />
+                      </a>
+                    </li>
+                    <li>
+                      <a href={person.projectUrl} target="_blank" className="text-gray-400 hover:text-black dark:hover:text-white" title='Ver proyecto'>
+                        <span className="sr-only">ProjectUrl</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-9 w-9  hover:h-10 hover:w-10 ease-out duration-300">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              ))
+          }
+        </ul>
       </div>
-    )
-  }
-  
+    </div>
+  )
+}
