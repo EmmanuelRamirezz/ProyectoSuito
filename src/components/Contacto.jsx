@@ -266,7 +266,7 @@ export default function Contacto() {
               </button>
               {/* No salta capcha y te redirecciona de fuelta */}
               <input type="hidden" name="_captcha" value="false"></input>
-              <input type="hidden" name="_next" value="http://localhost:5173/"></input>
+              <input type="hidden" name="_next" value="https://emmanuelramirezrubio.netlify.app/"></input>
             </div>
             <p className="hidden mt-6 text-lg leading-8 text-green-400" id='conf'>{lan ? correctText : "Formulario enviado con exito, gracias"}</p>
           </div>
