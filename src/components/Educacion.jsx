@@ -157,7 +157,7 @@ export default function Educacion() {
   const [lan, setLan] = useContext(UserContext);
   return (
 
-    <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD">
+    <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD" id='education'>
       <a name='education' className='pt-24'></a>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

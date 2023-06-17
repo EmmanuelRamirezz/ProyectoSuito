@@ -170,7 +170,7 @@ const subTitle = "Projects that I have developed since 2020 where university, pe
 export default function Proyectos() {
   const [lan, setLan] = useContext(UserContext);
   return (
-    <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD">
+    <div className="py-24 sm:py-32 bg-footerL dark:bg-footerD" id="projects">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">

@@ -1,4 +1,4 @@
-
+import { Link } from 'react-scroll';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useState, useContext } from 'react';
@@ -6,22 +6,23 @@ import { UserContext } from "../context/UserProvider";
 const htmlID = document.getElementById('htmlID');
 
 const navigationES = [
-  { name: 'Sobre mi', href: '#about', current: false },
-  { name: 'Educación', href: '#education', current: false },
-  { name: 'Técnologías', href: '#tecs', current: false },
-  { name: 'Proyectos', href: '#projects', current: false },
-  { name: 'Contacto', href: '#contact', current: false },
+  { name: 'Sobre mi', href: '#about', current: false, id: "about" },
+  { name: 'Educación', href: '#education', current: false, id: "education" },
+  { name: 'Técnologías', href: '#tecs', current: false, id: "techs" },
+  { name: 'Proyectos', href: '#projects', current: false, id: "projects" },
+  { name: 'Contacto', href: '#contact', current: false, id: "contact" },
 ]
 const navigationEN = [
-  { name: 'About', href: '#about', current: false },
-  { name: 'Education', href: '#education', current: false },
-  { name: 'Technologies', href: '#tecs', current: false },
-  { name: 'Projects', href: '#projects', current: false },
-  { name: 'Contact', href: '#contact', current: false },
+  { name: 'About', href: '#about', current: false, id: "about" },
+  { name: 'Education', href: '#education', current: false, id: "education" },
+  { name: 'Technologies', href: '#tecs', current: false, id: "techs" },
+  { name: 'Projects', href: '#projects', current: false, id: "projects" },
+  { name: 'Contact', href: '#contact', current: false, id: "contact" },
 ]
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
+
 export default function NavBar() {
   const [lan, setLan] = useContext(UserContext);
 
@@ -42,7 +43,7 @@ export default function NavBar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2  hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white text-black dark:text-gray-400">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -51,47 +52,57 @@ export default function NavBar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+              <div className="flex flex-1 items-center justify-evenly sm:items-stretch sm:justify-start">
+                <Link className="flex flex-shrink-0 items-center  hover:cursor-pointer" to="about" spy={true} smooth={true} offset={-50} duration={500}>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 h-12 text-black dark:text-gray-400">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
                   </svg>
-
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className = "flex space-x-4 max-md:space-x-1">
                     {/* Toggle idioma navbar */}
                     {
                       lan ?
                         navigationEN.map((item) => (
-                          <a
+                          <Link
+                            to={item.id}
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={500}
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                              item.current ? 'bg-gray-900 text-black dark:text-gray-400' : 'dark:text-gray-300 hover:bg-gray-400 hover:text-white',
+                            item.current ? 'underline underline-offset-8 decoration-buttons decoration-2 text-black dark:text-white' : 'dark:text-gray-300 hover:bg-gray-400 hover:text-white',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
-                            aria-current={item.current ? 'page' : undefined}
+                            aria-current={item.current ? 'true' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))
                         :
                         navigationES.map((item) => (
-                          <a
+                          <Link
+                            to={item.id}
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={500}
+
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                              item.current ? 'bg-gray-900 text-black dark:text-gray-400' : 'dark:text-gray-300 hover:bg-gray-400 hover:text-white',
+                              item.current ? 'underline underline-offset-8 decoration-buttons decoration-2 text-black dark:text-white' : 'dark:text-gray-300 hover:bg-gray-400 hover:text-white',
                               'rounded-md px-3 py-2 text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))
 
-                    }                
+                    }
                   </div>
                 </div>
               </div>
@@ -109,7 +120,7 @@ export default function NavBar() {
                   </button>
                 </div>
                 {/* Light and dark mode button */}
-                <div onClick={clickHandler} className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white text-black'
+                <div onClick={clickHandler} className='rounded-3xl hover:bg-gray-400 hover:text-white dark:text-gray-400 dark:hover:text-white text-black max-sm:ml-4'
                 >
                   {lightMode ? htmlID.classList.remove('dark') : htmlID.classList.add('dark')}
                   {/* Light Mode */}
@@ -138,35 +149,48 @@ export default function NavBar() {
             </div>
           </div>
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="space-y-1 px-0 pb-3 pt-2">
               {lan ?
                 navigationEN.map((item) => (
+
                   <Disclosure.Button
                     key={item.name}
-                    as="a"
-                    href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'dark:bg-gray-700 dark:text-white text-black bg-mainL' : 'text-black dark:text-white hover:bg-gray-700 hover:text-white',
                       'block rounded-md px-3 py-2 text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
-                    {item.name}
+                    <Link
+                      to={item.id}
+                      spy={true}
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                    >
+                      {item.name}
+                    </Link>
                   </Disclosure.Button>
                 ))
                 :
                 navigationES.map((item) => (
                   <Disclosure.Button
                     key={item.name}
-                    as="a"
-                    href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                      item.current ? 'dark:bg-gray-700 dark:text-white text-black bg-mainL' : 'text-black dark:text-white hover:bg-gray-700 hover:text-white',
                       'block rounded-md px-3 py-2 text-base font-medium'
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
-                    {item.name}
+                    <Link
+                      to={item.id}
+                      spy={true}
+                      smooth={true}
+                      offset={-50}
+                      duration={500}
+                    >
+                      {item.name}
+                    </Link>
                   </Disclosure.Button>
                 ))
               }
