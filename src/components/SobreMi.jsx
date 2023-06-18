@@ -7,7 +7,7 @@ const features = [
   {
     name: 'Egresado.',
     description:
-      'Graduado de Ingeniero en sistemas computacionales del Tecnológico superior de jalisco en diciembre del 2022. Espero optener mi titulo en agosto del 2023.',
+      'Graduado de Ingeniero en sistemas computacionales del Tecnológico superior de jalisco en diciembre del 2022. Espero obtener mi título en agosto del 2023.',
     icon: AcademicCapIcon,
   },
   {
@@ -17,7 +17,7 @@ const features = [
   },
   {
     name: 'Inglés.',
-    description: 'Me siento comodo con el inglés, actualmente tengo una certificación de ingles de oxford con puntuacion de B2 según el Marco Común Europeo de Referencia.',
+    description: 'Me siento comodo con el inglés, actualmente tengo una certificación de ingles de oxford con puntuación de B2 según el Marco Común Europeo de Referencia.',
     icon: LanguageIcon,
   },
   {
