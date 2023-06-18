@@ -12,7 +12,7 @@ const features = [
   },
   {
     name: 'Experiencia laboral.',
-    description: 'Desde marzo del 2023 he estado trabajando como voluntario en ENMICE en el area de desarrollo web. Donde soy supervisado por miembros de la AEM. Las tecnologías que manejamos son: React, tailwind, python, django.',
+    description: 'Desde marzo del 2023 he estado trabajando como voluntario en ENMICE en el area de desarrollo web. Donde soy supervisado por miembros de la AEM. Las tecnologías que manejamos son: React, tailwind, python y django.',
     icon: CodeBracketIcon,
   },
   {

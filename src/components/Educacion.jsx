@@ -25,7 +25,7 @@ const posts = [
     title: 'Platzi',
     href: '#',
     description:
-      'Platzi es una plataforma de cursos y certificaciones que utilicé para complementar mi educación universitaria y especializarme en el desarrollo web y desarrollar mis habilidades blandas.',
+      'Platzi es una plataforma de cursos y certificaciones que utilicé para complementar mi educación universitaria y especializarme en el desarrollo web y mejorar mis habilidades blandas.',
     imageUrl: platzi,
     date: 'Alumno desde el 2020',
     datetime: '2020-03-16',
@@ -275,7 +275,7 @@ export default function Educacion() {
                   </div>
                   <div className="flex items-center justify-center pb-5 dark:text-white bg-footerL dark:bg-footerD">
                     <button
-                      className="rounded-md buttonD px-10 py-2.5 text-center text-md mt-20 mx-auto font-semibold text-white shadow-sm buttonD:hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                      className="rounded-md bg-buttons px-8 py-2.5 text-center text-md mt-20 mx-auto font-semibold text-white shadow-sm hover:bg-buttonsH focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                       type="button"
                       onClick={() => setShowModal(false)}
                     >

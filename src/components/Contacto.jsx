@@ -25,7 +25,7 @@ export default function Contacto() {
   });
 
   const title = "Contact"
-  const subTitle = "Do you have a project in mind? Get in touch with me by filling out the following form and I will contact you as soon as possible. While, you can review my linkedin and my resume."
+  const subTitle = "Do you have a project in mind? Get in touch with me by filling out the following form and I will contact you as soon as possible. Meanwhile, you can review my linkedin profile and my resume."
   const name = "First name";
   const last = "Last Name";
   const message = "Message";
@@ -132,7 +132,7 @@ export default function Contacto() {
               {lan ? title : "Contacto"}
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-              {lan ? subTitle : "¿Tienes un proyecto en mente? Ponte en contacto conmigo llenando el siguiente formulario y me comunicaré contigo lo antes posible. Mientras puedes revisar mi linkedin y mi curriculum."}
+              {lan ? subTitle : "¿Tienes un proyecto en mente? Ponte en contacto conmigo llenando el siguiente formulario y me comunicaré contigo lo antes posible. Mientras puedes revisar mi perfil de linkedin y mi curriculum."}
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300">
               <div className="flex gap-x-4">

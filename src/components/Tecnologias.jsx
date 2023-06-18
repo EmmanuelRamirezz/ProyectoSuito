@@ -96,7 +96,7 @@ const tecsEN = [
 
 ]
 const title = "Technologies";
-const subTitle = "These are the technologies that I currently master and that are of great relevance in the area of web development";
+const subTitle = "These are the technologies that I currently master and that are of great relevance in the area of web development. I always try to be updated and expanding my knowledge.";
 export default function Tecnologias() {
   const [lan, setLan] = useContext(UserContext);
   return (
@@ -107,7 +107,7 @@ export default function Tecnologias() {
             {lan ? title : "Tecnologías"}
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            {lan ? subTitle : "Estas son las tecnologías que domino actualmente y que son de gran relevancía en el area del desarrollo web"}
+            {lan ? subTitle : "Estas son las tecnologías que domino actualmente y que son de gran relevancía en el area del desarrollo web.  Siempre trato de estar actualizado y expandiendo mis conocimientos."}
           </p>
         </div>
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
