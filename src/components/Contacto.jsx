@@ -197,7 +197,7 @@ export default function Contacto() {
                     value={formulario.nombre}
                     onChange={handleChange}
                     autoComplete="given-name"
-                    className="block w-full rounded-md border-0 contact px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
+                    className="block w-full rounded-md border-0 contact px-3.5 py-2 text-black dark:text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
 
                 </div>
@@ -215,7 +215,7 @@ export default function Contacto() {
                     value={formulario.apellido}
                     onChange={handleChange}
                     autoComplete="family-name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ringbuttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-black dark:text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ringbuttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
 
                 </div>
@@ -233,7 +233,7 @@ export default function Contacto() {
                     value={formulario.email}
                     onChange={handleChange}
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-black dark:text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   />
                   {errores.email && <p className="mt-6 text-lg leading-8 text-red-400">{errores.email}</p>}
                 </div>
@@ -249,7 +249,7 @@ export default function Contacto() {
                     value={formulario.mensaje}
                     onChange={handleChange}
                     rows={4}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-black dark:text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-buttonsH sm:text-sm sm:leading-6 bg-footerL dark:bg-footerD"
                   //defaultValue={''}
                   />
                   {errores.mensaje && <p className="mt-6 text-lg leading-8 text-red-400">{errores.mensaje}</p>}
@@ -266,7 +266,7 @@ export default function Contacto() {
               </button>
               {/* No salta capcha y te redirecciona de fuelta */}
               <input type="hidden" name="_captcha" value="false"></input>
-              <input type="hidden" name="_next" value="https://emmanuelramirezrubio.netlify.app/"></input>
+              <input type="hidden" name="_next" value="https://emmanuelramirezrubio.com"></input>
             </div>
             <p className="hidden mt-6 text-lg leading-8 text-green-400" id='conf'>{lan ? correctText : "Formulario enviado con exito, gracias"}</p>
           </div>
