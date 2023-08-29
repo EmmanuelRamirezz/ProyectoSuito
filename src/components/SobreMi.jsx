@@ -7,7 +7,7 @@ const features = [
   {
     name: 'Egresado.',
     description:
-      'Graduado de Ingeniero en sistemas computacionales del Tecnológico superior de jalisco en diciembre del 2022. Espero obtener mi título en agosto del 2023.',
+      'Graduado de Ingeniero en sistemas computacionales del Tecnológico Superior de Jalisco en diciembre del 2022. La fecha de entrega de mi título es el día 27 de septiembre del 2023.',
     icon: AcademicCapIcon,
   },
   {
@@ -22,19 +22,19 @@ const features = [
   },
   {
     name: 'Sobre mí.',
-    description: 'Actualmente viviendo en Puerto Vallarta Jalisco pero con planes de mudarme a Guadalajara. Me encanta el desarrollo de software, leer, entrenar calistenia y jugar videojuegos.',
+    description: 'Originario de Puerto Vallarta y actualmente viviendo en Guadalajara, Jalisco. Me encanta el desarrollo de software, leer, entrenar calistenia y jugar videojuegos.',
     icon: UserIcon,
   },
 ]
 const featuresEN = [
   {
     name: 'Graduated',
-    description: 'Graduated as a Computer Systems Engineer from "Tecnológico superior de jalisco" in December 2022. I hope to obtain my degree in August 2023.',
+    description: 'Graduated as a Computer Systems Engineer from the Tecnológico Superior de Jalisco in December 2022. The delivery date of my degree is September 27, 2023.',
     icon: AcademicCapIcon
   },
   {
     name: 'Laboral experience.',
-    description: 'Since March 2023 I have been working as a volunteer at ENMICE in the area of web development. Where I am supervised by members of the AEM. The technologies we handle are: React, tailwind, python, django',
+    description: 'Since March 2023 I have been working as a volunteer at ENMICE in the area of web development. Where I am supervised by members of the AEM. The technologies we use are: React, tailwind, python, django.',
     icon: CodeBracketIcon
   }, {
     name: 'English.',
@@ -42,7 +42,7 @@ const featuresEN = [
     icon: LanguageIcon
   }, {
     name: 'More about me.',
-    description: 'Currently living in Puerto Vallarta Jalisco but with plans to move to Guadalajara. I love software development, reading, calisthenics training, and playing video games.',
+    description: 'Originally from Puerto Vallarta and currently living in Guadalajara, Jalisco. I love software development, reading, calisthenics training, and playing video games.',
     icon: UserIcon
   },
 ]

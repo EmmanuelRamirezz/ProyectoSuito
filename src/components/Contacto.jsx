@@ -1,5 +1,6 @@
 
 import cv from '../assets/CV_Emmanuel_Ramirez_Rubio.pdf'
+import carta from '../assets/Carta_Recomendacion_Emmanuel_Ramirez_Rubio.pdf'
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from "../context/UserProvider";
@@ -178,6 +179,22 @@ export default function Contacto() {
                     Curriculum
                   </a>
                 </dd>
+                
+              </div>
+              <div className="flex gap-x-4">
+                <dt className="flex-none">
+                  <span className="sr-only">Email</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                  </svg>
+
+                </dt>
+                <dd>
+                  <a className="hover:font-bold dark:hover:text-white" href={carta} download="Carta_Recomendacion_Emmanuel_Ramirez_Rubio.pdf" title='descarcar carta de recomendacion'>
+                    Carta de recomendación de ENMICE
+                  </a>
+                </dd>
+                
               </div>
             </dl>
           </div>

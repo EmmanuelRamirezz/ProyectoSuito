@@ -8,42 +8,58 @@ import p7 from '../assets/p7.svg';
 import p8 from '../assets/p8.svg';
 import p9 from '../assets/p9.svg';
 import p10 from '../assets/p10.svg';
+import p11 from '../assets/p11.svg';
+import p12 from '../assets/p12.svg';
 import github from '../assets/github.png'
 import { useContext } from 'react';
 import { UserContext } from "../context/UserProvider";
 
 const projects = [
   {
-    name: 'App de tareas pendientes con React',
-    role: 'Mi primera app de React funcional donde se implementan conceptos clave como: componentes, elementos, estados, hooks, effects, portals, context y props. Más proyectos con esta librería están en proceso.',
-    imageUrl: p7,
-    githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
-    projectUrl: 'https://react-basic-ex.netlify.app/',
+    name: 'Pagina oficial de ENMICE',
+    role: 'Es el sitio oficial del Encuentro Mexicano de Ingeniería en Cohetería experimental. Proyecto en el que colaboré activamente durante mi voluntariado en dicha empresa mientras era supervisado por personal de la AEM. Desarrollado con react, tailwind, python y django. Para más informacion del proyecto revisar mi carta de recomendación laboral.',
+    imageUrl: p12,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/',
+    projectUrl: 'https://enmice.mx/',
   },
   {
-    name: 'Calculadora con React',
-    role: 'App basica creada para practicar conceptos fundamentales de React. Donde se manejan estados, props, comunicación entre componentes, lógica de JS y estilos con CSS',
-    imageUrl: p9,
-    githubUrl: 'https://github.com/EmmanuelRamirezz/react-calculator',
-    projectUrl: 'https://ramirez-react-calculator.netlify.app',
+    name: 'Pokedex',
+    role: 'Aplicación donde despliega información de pokemones la cual se puede paginar y filtrar. Es consumida desde la api pokeapi.co y fue creada usando React, Tailwind y diversos react hooks como: useEffect, useContext, useState, react-router entre otros. Esta lógica es ideal para realizar diversos proyectos web.',
+    imageUrl: p11,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/pokemon-app',
+    projectUrl: 'https://ramirez-pokemons-app.netlify.app',
   },
   {
-    name: 'Logica de un carrito de compras con React',
-    role: 'Proyecto donde se implementa la lógica funcional de un carrito de compras ideal para un e-commerce. Desarrollado con React y tailwind. Usando reactRouter, reactContext y useState',
+    name: 'Lógica de un e-comerce',
+    role: 'Proyecto donde se implementa la lógica funcional de un e-comerce. Los productos vienen desde una api, estos se pueden filtrar y agregar a un carrito de compras para obtener un total. Creada con react, typescript, tailwind y diversos react hooks.',
     imageUrl: p10,
     githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
     projectUrl: 'https://cartslogic.netlify.app',
   },
   {
+    name: 'Calculadora con React',
+    role: 'App basica creada para practicar conceptos fundamentales de React. Donde se manejan estados, props, comunicación entre componentes, buenas practicas, lógica de JS y estilos con CSS.',
+    imageUrl: p9,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-calculator',
+    projectUrl: 'https://ramirez-react-calculator.netlify.app',
+  },
+  {
+    name: 'App de tareas pendientes con React',
+    role: 'Mi primera app de React funcional donde se implementan conceptos clave como: componentes, elementos, estados, hooks, effects, portals, context y props. Proyecto creado a partir de una certificación de Platzi.',
+    imageUrl: p7,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
+    projectUrl: 'https://react-basic-ex.netlify.app/',
+  },
+  {
     name: 'Frontend-movies',
-    role: 'Pagina web donde se implementa el consumo de una API REST profecional. Al igual que la metodología de desarrollo "single page aplication". Orientado a un sitio de peliculas. Cabe destacar que todos mis proyectos cuentan con responsive design y buenas practicas, avaladas por lighthouse. API usada: themoviedb.org',
+    role: 'Pagina web donde se implementa el consumo de una API REST profecional. Al igual que la metodología de desarrollo "single page aplication". Orientado a un sitio de peliculas. API usada: themoviedb.org',
     imageUrl: p8,
     githubUrl: 'https://github.com/EmmanuelRamirezz/advanced-api-rest-proyect',
     projectUrl: 'https://frontendmovies.netlify.app/',
   },
   {
     name: 'App de perritos',
-    role: 'App basica donde se aplican conceptos clave de consumo de API REST. Donde se puedeconsumir, filtrar y subir contenido. Al mismo tiempo que se manipula la información paraser mostrada correctamente',
+    role: 'App basica donde se aplican conceptos clave de consumo de API REST. Donde se puede consumir, filtrar y subir contenido. Al mismo tiempo que se manipula la información para ser mostrada correctamente.',
     imageUrl: p1,
     githubUrl: 'https://github.com/EmmanuelRamirezz/perritos-api-rest',
     projectUrl: 'https://doggysapp.netlify.app/',
@@ -57,7 +73,7 @@ const projects = [
   },
   {
     name: 'Herramientas estadisticas',
-    role: 'Proyecto con 6 herramientas estadisticas, enfocado a la resolución de problemas y de buenas practicas de maquetación. Desarrollando la logica de Javascript moderno (ECMAScript 6)',
+    role: 'Proyecto con 6 herramientas estadisticas, enfocado a la resolución de problemas y de buenas practicas de maquetación. Desarrollando la logica de Javascript moderno (ECMAScript 6).',
     imageUrl:
       p3,
     githubUrl: 'https://github.com/EmmanuelRamirezz/curso-practico-javascript',
@@ -65,7 +81,7 @@ const projects = [
   },
   {
     name: 'Sitio de divisas Batatabit',
-    role: 'Proyecto elaborado siguiendo la metodologia de desarrollo "Mobile first" donde se muestra un sitio ficticio de finanzas y divisas. Elaborado a partir de un curso en platzi.',
+    role: 'Proyecto elaborado siguiendo la metodologia de desarrollo "Mobile first" donde se muestra un sitio ficticio de finanzas y divisas. Elaborado a partir de un curso en Platzi.',
     imageUrl:
       p4,
     githubUrl: 'https://github.com/EmmanuelRamirezz/divisas-batatabit',
@@ -90,11 +106,25 @@ const projects = [
 ];
 const projectsEN = [
   {
-    name: 'To-do app with React',
-    role: 'My first functional React app where you can find key concepts such as: components, elements, states, hooks, effects, portals, context and props are implemented. More projects with this library are coming.',
-    imageUrl: p7,
-    githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
-    projectUrl: 'https://react-basic-ex.netlify.app/',
+    name: 'ENMICE official page',
+    role: 'It is the official site of the: Encuentro Mexicano de Ingeniería en Cohetería experimental. Project in which I actively collaborated during my volunteering in this company while being supervised by AEM personnel. Developed with react, tailwind, python and django. For more information about the project, check my job recommendation letter.',
+    imageUrl: p12,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/',
+    projectUrl: 'https://enmice.mx/',
+  },
+  {
+    name: 'Pokedex',
+    role: 'Application where it displays pokemon information which can be paginated and filtered. It is consumed from the pokeapi.co api and was created using react, tailwind and various react hooks such as: useEffect, useContext, useState, react-router among others. This logic is ideal for carrying out various web projects.',
+    imageUrl: p11,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/pokemon-app',
+    projectUrl: 'https://ramirez-pokemons-app.netlify.app',
+  },
+  {
+    name: 'Logic of a shopping cart with React',
+    role: 'Project where the functional logic of an e-commerce is implemented. Products come from an api, these can be filtered and added to a shopping cart to get a total. Created with react, typescript, tailwind and various react hooks.',
+    imageUrl: p10,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
+    projectUrl: 'https://cartslogic.netlify.app',
   },
   {
     name: 'Calculator with React',
@@ -104,15 +134,15 @@ const projectsEN = [
     projectUrl: 'https://ramirez-react-calculator.netlify.app',
   },
   {
-    name: 'Logic of a shopping cart with React',
-    role: 'Project where the logic of a functional shopping cart is implemented. Ideal for an e-commerce. Developed with React and tailwind. Using reactRouter, reactContext and useState',
-    imageUrl: p10,
-    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
-    projectUrl: 'https://cartslogic.netlify.app',
+    name: 'To-do app with React',
+    role: 'My first functional React app where you can find key concepts such as: components, elements, states, hooks, effects, portals, context and props are implemented. Project created from a Platzi certification.',
+    imageUrl: p7,
+    githubUrl: 'https://github.com/EmmanuelRamirezz/react-todo-list',
+    projectUrl: 'https://react-basic-ex.netlify.app/',
   },
   {
     name: 'Frontend-movies',
-    role: 'Web page where the consumption of a professional REST API is implemented. The concept of "single page application" is implemented creating a site about movie. It should be noted that all my projects have responsive design and good practices, endorsed by lighthouse. API used: themoviedb.org',
+    role: 'Web page where the consumption of a professional REST API is implemented. The concept of "single page application" is implemented creating a site about movie. API used: themoviedb.org',
     imageUrl: p8,
     githubUrl: 'https://github.com/EmmanuelRamirezz/advanced-api-rest-proyect',
     projectUrl: 'https://frontendmovies.netlify.app/',

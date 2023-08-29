@@ -6,6 +6,7 @@ import github from '../assets/github.png'
 import tailwind from '../assets/tailwind.png'
 import vite from '../assets/vite.png'
 import database from '../assets/database.png'
+import typescript from '../assets/typescript.png'
 import { useContext } from 'react';
 import { UserContext } from "../context/UserProvider";
 
@@ -16,29 +17,9 @@ const tecs = [
     imageUrl: html,
   },
   {
-    name: 'CSS 3',
-    role: 'Avanzado',
-    imageUrl: css,
-  },
-  {
-    name: 'Javascript (ES5)',
-    role: 'Avanzado',
-    imageUrl: js,
-  },
-  {
     name: 'React',
     role: 'Intermedio',
     imageUrl: react,
-  },
-  {
-    name: 'Tailwind',
-    role: 'Avanzado',
-    imageUrl: tailwind,
-  },
-  {
-    name: 'Vite',
-    role: 'Avanzado',
-    imageUrl: vite,
   },
   {
     name: 'Github',
@@ -46,11 +27,35 @@ const tecs = [
     imageUrl: github,
   },
   {
+    name: 'CSS 3',
+    role: 'Avanzado',
+    imageUrl: css,
+  },
+  {
+    name: 'Typescript',
+    role: 'Intermedio',
+    imageUrl: typescript,
+  },
+  {
+    name: 'Vite',
+    role: 'Avanzado',
+    imageUrl: vite,
+  },
+  {
+    name: 'Javascript (ES6)',
+    role: 'Avanzado',
+    imageUrl: js,
+  },
+  {
+    name: 'Tailwind',
+    role: 'Avanzado',
+    imageUrl: tailwind,
+  },
+  {
     name: 'Bases de datos SQL',
     role: 'Basico',
     imageUrl: database,
   },
-
 ]
 const tecsEN = [
   {
@@ -59,29 +64,9 @@ const tecsEN = [
     imageUrl: html,
   },
   {
-    name: 'CSS 3',
-    role: 'Advanced',
-    imageUrl: css,
-  },
-  {
-    name: 'Javascript (ES5)',
-    role: 'Advanced',
-    imageUrl: js,
-  },
-  {
     name: 'React',
     role: 'Intermediate',
     imageUrl: react,
-  },
-  {
-    name: 'Tailwind',
-    role: 'Advanced',
-    imageUrl: tailwind,
-  },
-  {
-    name: 'Vite',
-    role: 'Advanced',
-    imageUrl: vite,
   },
   {
     name: 'Github',
@@ -89,11 +74,35 @@ const tecsEN = [
     imageUrl: github,
   },
   {
-    name: 'SQL Databases',
+    name: 'CSS 3',
+    role: 'Advanced',
+    imageUrl: css,
+  },
+  {
+    name: 'Typescript',
+    role: 'Intermediate',
+    imageUrl: typescript,
+  },
+  {
+    name: 'Vite',
+    role: 'Advanced',
+    imageUrl: vite,
+  },
+  {
+    name: 'Javascript (ES6)',
+    role: 'Advanced',
+    imageUrl: js,
+  },
+  {
+    name: 'Tailwind',
+    role: 'Advanced',
+    imageUrl: tailwind,
+  },
+  {
+    name: 'Bases de datos SQL',
     role: 'Basic',
     imageUrl: database,
   },
-
 ]
 const title = "Technologies";
 const subTitle = "These are the technologies that I currently master and that are of great relevance in the area of web development. I always try to be updated and expanding my knowledge.";
@@ -102,7 +111,7 @@ export default function Tecnologias() {
   return (
     <div className="py-24 sm:py-32 bg-mainL dark:bg-mainD" id='techs'>
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mr-8">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black dark:text-white">
             {lan ? title : "Tecnologías"}
           </h2>
@@ -110,7 +119,7 @@ export default function Tecnologias() {
             {lan ? subTitle : "Estas son las tecnologías que domino actualmente y que son de gran relevancía en el area del desarrollo web.  Siempre trato de estar actualizado y expandiendo mis conocimientos."}
           </p>
         </div>
-        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2">
           {
             lan ?
               tecsEN.map((tec) => (
