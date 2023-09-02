@@ -31,10 +31,10 @@ const projects = [
   },
   {
     name: 'Lógica de un e-comerce',
-    role: 'Proyecto donde se implementa la lógica funcional de un e-comerce. Los productos vienen desde una api, estos se pueden filtrar y agregar a un carrito de compras para obtener un total. Creada con react, typescript, tailwind y diversos react hooks.',
+    role: 'Proyecto donde se implementa la lógica funcional de un e-comerce. Los productos vienen desde una api, estos se pueden filtrar y agregar a un carrito de compras para obtener un total. Creada con react, typescript, tailwind y diversos react hooks. Contiene rutas dinamicas y un contexto global, lo que mejora mucho la sostenibilidad',
     imageUrl: p10,
-    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
-    projectUrl: 'https://cartslogic.netlify.app',
+    githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-typescript',
+    projectUrl: 'https://ecommerce-typescript.netlify.app/',
   },
   {
     name: 'Calculadora con React',
@@ -121,7 +121,7 @@ const projectsEN = [
   },
   {
     name: 'Logic of a shopping cart with React',
-    role: 'Project where the functional logic of an e-commerce is implemented. Products come from an api, these can be filtered and added to a shopping cart to get a total. Created with react, typescript, tailwind and various react hooks.',
+    role: 'Project where the functional logic of an e-commerce is implemented. Products come from an api, these can be filtered and added to a shopping cart to get a total. Created with react, typescript, tailwind and various react hooks. It contains dynamic routes and a global context that brings more sustainable',
     imageUrl: p10,
     githubUrl: 'https://github.com/EmmanuelRamirezz/carrito-de-compras',
     projectUrl: 'https://cartslogic.netlify.app',

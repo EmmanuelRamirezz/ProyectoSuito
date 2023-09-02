@@ -146,7 +146,7 @@ export default function Contacto() {
                   </svg>
                 </dt>
                 <dd>
-                  Puerto Vallarta, Jalisco
+                  Guadalajara, Jalisco
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -190,9 +190,16 @@ export default function Contacto() {
 
                 </dt>
                 <dd>
-                  <a className="hover:font-bold dark:hover:text-white" href={carta} download="Carta_Recomendacion_Emmanuel_Ramirez_Rubio.pdf" title='descarcar carta de recomendacion'>
-                    Carta de recomendación de ENMICE
-                  </a>
+                {lan ? 
+              (                  <a className="hover:font-bold dark:hover:text-white" href={carta} download="Carta_Recomendacion_Emmanuel_Ramirez_Rubio.pdf" title='descarcar carta de recomendacion'>
+              Recommendation letter
+            </a>)
+              :
+              (                  <a className="hover:font-bold dark:hover:text-white" href={carta} download="Carta_Recomendacion_Emmanuel_Ramirez_Rubio.pdf" title='descarcar carta de recomendacion'>
+              Carta de recomendación de ENMICE
+            </a>)
+              }
+
                 </dd>
                 
               </div>

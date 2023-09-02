@@ -14,7 +14,7 @@ const posts = [
     title: 'Tecnológico Superior de Jalisco',
     href: '#',
     description:
-      'Egresado en diciembre del 2022 de la carrera de ingeniería en sistemas computacionales con promedio de 90. Durante este periodo aprendí las bases del area de la tecnología y trabajo en equipo.',
+      'Egresado en diciembre del 2022 de la carrera de ingeniería en sistemas computacionales con promedio de 90. Durante este periodo aprendí las bases del area de la tecnología y del trabajo en equipo.',
     imageUrl: tsj,
     date: '2018 - 2022',
     datetime: '2020-03-16',
@@ -25,7 +25,7 @@ const posts = [
     title: 'Platzi',
     href: '#',
     description:
-      'Platzi es una plataforma de cursos y certificaciones que utilicé para complementar mi educación universitaria y especializarme en el desarrollo web y mejorar mis habilidades blandas.',
+      'Platzi es una plataforma de cursos y certificaciones que utilicé para complementar mi educación universitaria para especializarme en el desarrollo web y mejorar mis habilidades blandas.',
     imageUrl: platzi,
     date: 'Alumno desde el 2020',
     datetime: '2020-03-16',
