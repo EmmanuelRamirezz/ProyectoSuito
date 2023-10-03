@@ -7,7 +7,7 @@ const features = [
   {
     name: 'Egresado.',
     description:
-      'Graduado de Ingeniero en sistemas computacionales del Tecnológico Superior de Jalisco en diciembre del 2022. La fecha de entrega de mi título es el día 27 de septiembre del 2023.',
+      'Graduado de Ingeniero en sistemas computacionales del Tecnológico Superior de Jalisco en diciembre del 2022. Titulado en septiembre del 2023.',
     icon: AcademicCapIcon,
   },
   {
@@ -22,14 +22,14 @@ const features = [
   },
   {
     name: 'Sobre mí.',
-    description: 'Originario de Puerto Vallarta y actualmente viviendo en Guadalajara, Jalisco. Me encanta el desarrollo de software, leer, entrenar calistenia y jugar videojuegos.',
+    description: 'Originario de Puerto Vallarta y actualmente viviendo en Guadalajara, Jalisco. Me encanta el desarrollo de software, leer, entrenar calistenia, jugar videojuegos y aprender idiomas.',
     icon: UserIcon,
   },
 ]
 const featuresEN = [
   {
     name: 'Graduated',
-    description: 'Graduated as a Computer Systems Engineer from the Tecnológico Superior de Jalisco in December 2022. The delivery date of my degree is September 27, 2023.',
+    description: 'Graduated as a Computer Systems Engineer from the Tecnológico Superior de Jalisco in December 2022.',
     icon: AcademicCapIcon
   },
   {
@@ -42,7 +42,7 @@ const featuresEN = [
     icon: LanguageIcon
   }, {
     name: 'More about me.',
-    description: 'Originally from Puerto Vallarta and currently living in Guadalajara, Jalisco. I love software development, reading, calisthenics training, and playing video games.',
+    description: 'Originally from Puerto Vallarta and currently living in Guadalajara, Jalisco. I love software development, reading, calisthenics training, playing video games and learning new languages',
     icon: UserIcon
   },
 ]
